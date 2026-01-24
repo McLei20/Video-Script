@@ -2,6 +2,7 @@ import hashlib
 import json
 import data
 
+
 def get_video_hash(filepath):
     with open(filepath, "rb") as file:
         content = file.read()
@@ -43,14 +44,17 @@ def list_registered_videos():
         results.append({"id": key, "hash": value})
     return results
 
+
+
+
+
 #register_video("video_001", "test.mp4")
-result = check_integrity("video_001", "video/test1.mp4")
-print(f"Integrity check: {result}")
-print(list_registered_videos())
+# result = check_integrity("video_001", "video/test1.mp4")
+# print(f"Integrity check: {result}")
+# print(list_registered_videos())
 
-original = get_video_hash("video/test1.mp4")
-copy = get_video_hash("video/copy_test.mp4")
+# original = get_video_hash("video/test1.mp4")
+# copied = get_video_hash("video/copy_test.mp4")
+# reencoded = get_video_hash("video/reencode_test.mp4")
 
-print(f"Original: {original}")
-print(f"Copy: {copy}")
-print(f"Same?: {original == copy}")
+
